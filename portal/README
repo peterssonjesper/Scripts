@@ -1,0 +1,1 @@
+Checks if there are any new grades published on Studentportalen (for Linköpings Universitet), if so a push is sent using prowl.
