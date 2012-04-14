@@ -1,0 +1,11 @@
+Searches a single file, or a whole directory recursivly, to identify possible errors that causes Internet Explorer to not run the javascript correctly.
+
+Usage: python js_syntax_ie.py file.js
+       python js_syntax_ie.py directory_to_scan
+
+Example of error that would be found:
+
+In IE this would not work (notice the comma):
+{
+	"my_key" : "my_value",
+}
