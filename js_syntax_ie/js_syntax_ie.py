@@ -12,7 +12,7 @@ def search_file(filename):
 	try:
 		f = open(filename, 'r')
 	except:
-		print "Skipping file " + str(sys.argv[1]) + "..."
+		print "Skipping file " + str(filename) + "..."
 		return
 
 	content = f.read().replace("\t", "").replace(" ", "").split("\n")
