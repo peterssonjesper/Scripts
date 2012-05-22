@@ -9,6 +9,8 @@ USER="abcde123"
 PASSWORD="abcdefgh"
 EMAIL="to@this.email.com"
 
+MAIL_PATH="/bin/mail"
+
 DATE=`date "+%H"`
 
 if [ $DATE -lt 06 ]; then
@@ -26,8 +28,8 @@ diff /tmp/result.html /tmp/old_result.html > /dev/null
 NEW_GRADES=$?
 if [ ! $NEW_GRADES -eq 0 ]; then
 
-/usr/bin/mail -s "Nya betyg i studentportalen!" $EMAIL << EOF
-Nya betyg har kommit in i studentportalen!
+$MAIL_PATH -s "Nya betyg i studentportalen" $EMAIL << EOF
+Nya betyg har kommit in i studentportalen
 EOF
 
 fi
